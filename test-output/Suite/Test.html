@@ -1,0 +1,349 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>10/13/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Nov 16 19:42:45 IST 2023</td>
+</tr>
+<tr><td>Total time:</td><td>34 seconds (34314 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.Runner2.runScenario()'><b>runScenario</b><br>Test class: tests.Runner2<br>Test method: Runs Cucumber Scenarios<br>Parameters: "create a new post", "Optional[get posts and posts creation]"</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at gluecode.StepDefs2.method3(StepDefs2.java:88)
+	at ✽.status code is &quot;200&quot; as per &quot;duplicate&quot; and content type is &quot;application/json&quot;(file:///D:/Interview/API_Project_Using_Restassured-BDDcucumber-pico-testng/src/test/resources/features/feature2.feature:27)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace974505364", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace974505364'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at gluecode.StepDefs2.method3(StepDefs2.java:88)
+	at ✽.status code is &quot;200&quot; as per &quot;duplicate&quot; and content type is &quot;application/json&quot;(file:///D:/Interview/API_Project_Using_Restassured-BDDcucumber-pico-testng/src/test/resources/features/feature2.feature:27)
+</pre></div></td>
+<td>1</td>
+<td>tests.Runner2@221a3fa4</td></tr>
+<tr>
+<td title='tests.Runner3.runScenario()'><b>runScenario</b><br>Test class: tests.Runner3<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Optional[posts creation]"</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	expected [true] but found [false],
+	expected [true] but found [false]
+	at gluecode.StepDefs3.method1(StepDefs3.java:77)
+	at ✽.validate that restful service with content type as &quot;application/json&quot;(file:///D:/Interview/API_Project_Using_Restassured-BDDcucumber-pico-testng/src/test/resources/features/feature3.feature:7)
+... Removed 2 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1569625935", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1569625935'><pre>java.lang.AssertionError: The following asserts failed:
+	expected [true] but found [false],
+	expected [true] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at gluecode.StepDefs3.method1(StepDefs3.java:77)
+	at ✽.validate that restful service with content type as &quot;application/json&quot;(file:///D:/Interview/API_Project_Using_Restassured-BDDcucumber-pico-testng/src/test/resources/features/feature3.feature:7)
+</pre></div></td>
+<td>3</td>
+<td>tests.Runner3@451001e5</td></tr>
+<tr>
+<td title='tests.Runner2.runScenario()'><b>runScenario</b><br>Test class: tests.Runner2<br>Test method: Runs Cucumber Scenarios<br>Parameters: "get secific post in data driven", "Optional[get posts and posts creation]"</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at gluecode.StepDefs2.method1(StepDefs2.java:43)
+	at ✽.status code is &quot;400&quot; as per &quot;blank&quot; in json response body(file:///D:/Interview/API_Project_Using_Restassured-BDDcucumber-pico-testng/src/test/resources/features/feature2.feature:10)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace961987157", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace961987157'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at gluecode.StepDefs2.method1(StepDefs2.java:43)
+	at ✽.status code is &quot;400&quot; as per &quot;blank&quot; in json response body(file:///D:/Interview/API_Project_Using_Restassured-BDDcucumber-pico-testng/src/test/resources/features/feature2.feature:10)
+</pre></div></td>
+<td>0</td>
+<td>tests.Runner2@221a3fa4</td></tr>
+<tr>
+<td title='tests.Runner2.runScenario()'><b>runScenario</b><br>Test class: tests.Runner2<br>Test method: Runs Cucumber Scenarios<br>Parameters: "create a new post", "Optional[get posts and posts creation]"</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at gluecode.StepDefs2.method3(StepDefs2.java:88)
+	at ✽.status code is &quot;400&quot; as per &quot;wrong&quot; and content type is &quot;application/json&quot;(file:///D:/Interview/API_Project_Using_Restassured-BDDcucumber-pico-testng/src/test/resources/features/feature2.feature:27)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace97404586", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace97404586'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at gluecode.StepDefs2.method3(StepDefs2.java:88)
+	at ✽.status code is &quot;400&quot; as per &quot;wrong&quot; and content type is &quot;application/json&quot;(file:///D:/Interview/API_Project_Using_Restassured-BDDcucumber-pico-testng/src/test/resources/features/feature2.feature:27)
+</pre></div></td>
+<td>0</td>
+<td>tests.Runner2@221a3fa4</td></tr>
+<tr>
+<td title='tests.Runner2.runScenario()'><b>runScenario</b><br>Test class: tests.Runner2<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Optional[posts creation]"</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	expected [true] but found [false],
+	expected [true] but found [false]
+	at gluecode.StepDefs3.method1(StepDefs3.java:77)
+	at ✽.validate that restful service with content type as &quot;application/json&quot;(file:///D:/Interview/API_Project_Using_Restassured-BDDcucumber-pico-testng/src/test/resources/features/feature3.feature:7)
+... Removed 2 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace539956811", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace539956811'><pre>java.lang.AssertionError: The following asserts failed:
+	expected [true] but found [false],
+	expected [true] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at gluecode.StepDefs3.method1(StepDefs3.java:77)
+	at ✽.validate that restful service with content type as &quot;application/json&quot;(file:///D:/Interview/API_Project_Using_Restassured-BDDcucumber-pico-testng/src/test/resources/features/feature3.feature:7)
+</pre></div></td>
+<td>2</td>
+<td>tests.Runner2@221a3fa4</td></tr>
+<tr>
+<td title='tests.Runner2.runScenario()'><b>runScenario</b><br>Test class: tests.Runner2<br>Test method: Runs Cucumber Scenarios<br>Parameters: "delete an existing post", "Optional[posts deletion]"</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at gluecode.StepDefs4.method2(StepDefs4.java:40)
+	at ✽.status code is 204(file:///D:/Interview/API_Project_Using_Restassured-BDDcucumber-pico-testng/src/test/resources/features/feature4.feature:10)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace330199050", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace330199050'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at gluecode.StepDefs4.method2(StepDefs4.java:40)
+	at ✽.status code is 204(file:///D:/Interview/API_Project_Using_Restassured-BDDcucumber-pico-testng/src/test/resources/features/feature4.feature:10)
+</pre></div></td>
+<td>1</td>
+<td>tests.Runner2@221a3fa4</td></tr>
+<tr>
+<td title='tests.Runner3.runScenario()'><b>runScenario</b><br>Test class: tests.Runner3<br>Test method: Runs Cucumber Scenarios<br>Parameters: "get secific post in data driven", "Optional[get posts and posts creation]"</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at gluecode.StepDefs2.method1(StepDefs2.java:43)
+	at ✽.status code is &quot;400&quot; as per &quot;blank&quot; in json response body(file:///D:/Interview/API_Project_Using_Restassured-BDDcucumber-pico-testng/src/test/resources/features/feature2.feature:10)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace730103918", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace730103918'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at gluecode.StepDefs2.method1(StepDefs2.java:43)
+	at ✽.status code is &quot;400&quot; as per &quot;blank&quot; in json response body(file:///D:/Interview/API_Project_Using_Restassured-BDDcucumber-pico-testng/src/test/resources/features/feature2.feature:10)
+</pre></div></td>
+<td>7</td>
+<td>tests.Runner3@451001e5</td></tr>
+<tr>
+<td title='tests.Runner3.runScenario()'><b>runScenario</b><br>Test class: tests.Runner3<br>Test method: Runs Cucumber Scenarios<br>Parameters: "create a new post", "Optional[get posts and posts creation]"</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at gluecode.StepDefs2.method3(StepDefs2.java:88)
+	at ✽.status code is &quot;200&quot; as per &quot;duplicate&quot; and content type is &quot;application/json&quot;(file:///D:/Interview/API_Project_Using_Restassured-BDDcucumber-pico-testng/src/test/resources/features/feature2.feature:27)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace88765477", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace88765477'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at gluecode.StepDefs2.method3(StepDefs2.java:88)
+	at ✽.status code is &quot;200&quot; as per &quot;duplicate&quot; and content type is &quot;application/json&quot;(file:///D:/Interview/API_Project_Using_Restassured-BDDcucumber-pico-testng/src/test/resources/features/feature2.feature:27)
+</pre></div></td>
+<td>1</td>
+<td>tests.Runner3@451001e5</td></tr>
+<tr>
+<td title='tests.Runner3.runScenario()'><b>runScenario</b><br>Test class: tests.Runner3<br>Test method: Runs Cucumber Scenarios<br>Parameters: "delete an existing post", "Optional[posts deletion]"</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at gluecode.StepDefs4.method2(StepDefs4.java:40)
+	at ✽.status code is 204(file:///D:/Interview/API_Project_Using_Restassured-BDDcucumber-pico-testng/src/test/resources/features/feature4.feature:10)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1481245530", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1481245530'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at gluecode.StepDefs4.method2(StepDefs4.java:40)
+	at ✽.status code is 204(file:///D:/Interview/API_Project_Using_Restassured-BDDcucumber-pico-testng/src/test/resources/features/feature4.feature:10)
+</pre></div></td>
+<td>1</td>
+<td>tests.Runner3@451001e5</td></tr>
+<tr>
+<td title='tests.Runner3.runScenario()'><b>runScenario</b><br>Test class: tests.Runner3<br>Test method: Runs Cucumber Scenarios<br>Parameters: "create a new post", "Optional[get posts and posts creation]"</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at gluecode.StepDefs2.method3(StepDefs2.java:88)
+	at ✽.status code is &quot;400&quot; as per &quot;wrong&quot; and content type is &quot;application/json&quot;(file:///D:/Interview/API_Project_Using_Restassured-BDDcucumber-pico-testng/src/test/resources/features/feature2.feature:27)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1890877536", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1890877536'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at gluecode.StepDefs2.method3(StepDefs2.java:88)
+	at ✽.status code is &quot;400&quot; as per &quot;wrong&quot; and content type is &quot;application/json&quot;(file:///D:/Interview/API_Project_Using_Restassured-BDDcucumber-pico-testng/src/test/resources/features/feature2.feature:27)
+</pre></div></td>
+<td>1</td>
+<td>tests.Runner3@451001e5</td></tr>
+<tr>
+<td title='tests.Runner2.runScenario()'><b>runScenario</b><br>Test class: tests.Runner2<br>Test method: Runs Cucumber Scenarios<br>Parameters: "update posts", "Optional[posts updation]"</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	expected [true] but found [false],
+	expected [true] but found [false]
+	at gluecode.StepDefs5.method3(StepDefs5.java:112)
+	at ✽.validate response as per data in excel file(file:///D:/Interview/API_Project_Using_Restassured-BDDcucumber-pico-testng/src/test/resources/features/feature5.feature:18)
+... Removed 2 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace76594727", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace76594727'><pre>java.lang.AssertionError: The following asserts failed:
+	expected [true] but found [false],
+	expected [true] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at gluecode.StepDefs5.method3(StepDefs5.java:112)
+	at ✽.validate response as per data in excel file(file:///D:/Interview/API_Project_Using_Restassured-BDDcucumber-pico-testng/src/test/resources/features/feature5.feature:18)
+</pre></div></td>
+<td>8</td>
+<td>tests.Runner2@221a3fa4</td></tr>
+<tr>
+<td title='tests.Runner3.runScenario()'><b>runScenario</b><br>Test class: tests.Runner3<br>Test method: Runs Cucumber Scenarios<br>Parameters: "delete posts", "Optional[posts deletion]"</td>
+<td><div><pre>java.lang.RuntimeException: Wrong line number
+	at utilities.TextFilesUtility.getValuesOfLine(TextFilesUtility.java:32)
+	at gluecode.StepDefs4.method12(StepDefs4.java:50)
+	at ✽.submit request via DELETE to service by taking data from text file(file:///D:/Interview/API_Project_Using_Restassured-BDDcucumber-pico-testng/src/test/resources/features/feature4.feature:14)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1467873126", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1467873126'><pre>java.lang.RuntimeException: Wrong line number
+	at utilities.TextFilesUtility.getValuesOfLine(TextFilesUtility.java:32)
+	at gluecode.StepDefs4.method12(StepDefs4.java:50)
+	at ✽.submit request via DELETE to service by taking data from text file(file:///D:/Interview/API_Project_Using_Restassured-BDDcucumber-pico-testng/src/test/resources/features/feature4.feature:14)
+</pre></div></td>
+<td>4</td>
+<td>tests.Runner3@451001e5</td></tr>
+<tr>
+<td title='tests.Runner2.runScenario()'><b>runScenario</b><br>Test class: tests.Runner2<br>Test method: Runs Cucumber Scenarios<br>Parameters: "delete posts", "Optional[posts deletion]"</td>
+<td><div><pre>java.lang.RuntimeException: Wrong line number
+	at utilities.TextFilesUtility.getValuesOfLine(TextFilesUtility.java:32)
+	at gluecode.StepDefs4.method12(StepDefs4.java:50)
+	at ✽.submit request via DELETE to service by taking data from text file(file:///D:/Interview/API_Project_Using_Restassured-BDDcucumber-pico-testng/src/test/resources/features/feature4.feature:14)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1380264122", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1380264122'><pre>java.lang.RuntimeException: Wrong line number
+	at utilities.TextFilesUtility.getValuesOfLine(TextFilesUtility.java:32)
+	at gluecode.StepDefs4.method12(StepDefs4.java:50)
+	at ✽.submit request via DELETE to service by taking data from text file(file:///D:/Interview/API_Project_Using_Restassured-BDDcucumber-pico-testng/src/test/resources/features/feature4.feature:14)
+</pre></div></td>
+<td>3</td>
+<td>tests.Runner2@221a3fa4</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.Runner1.runScenario()'><b>runScenario</b><br>Test class: tests.Runner1<br>Test method: Runs Cucumber Scenarios<br>Parameters: "get all posts", "Optional[get user posts]"</td>
+<td></td>
+<td>7</td>
+<td>tests.Runner1@268f106e</td></tr>
+<tr>
+<td title='tests.Runner2.runScenario()'><b>runScenario</b><br>Test class: tests.Runner2<br>Test method: Runs Cucumber Scenarios<br>Parameters: "create a new post", "Optional[get posts and posts creation]"</td>
+<td></td>
+<td>0</td>
+<td>tests.Runner2@221a3fa4</td></tr>
+<tr>
+<td title='tests.Runner1.runScenario()'><b>runScenario</b><br>Test class: tests.Runner1<br>Test method: Runs Cucumber Scenarios<br>Parameters: "create a new post", "Optional[get posts and posts creation]"</td>
+<td></td>
+<td>0</td>
+<td>tests.Runner1@268f106e</td></tr>
+<tr>
+<td title='tests.Runner2.runScenario()'><b>runScenario</b><br>Test class: tests.Runner2<br>Test method: Runs Cucumber Scenarios<br>Parameters: "get secific post in data driven", "Optional[get posts and posts creation]"</td>
+<td></td>
+<td>0</td>
+<td>tests.Runner2@221a3fa4</td></tr>
+<tr>
+<td title='tests.Runner1.runScenario()'><b>runScenario</b><br>Test class: tests.Runner1<br>Test method: Runs Cucumber Scenarios<br>Parameters: "get specific post", "Optional[get user posts]"</td>
+<td></td>
+<td>1</td>
+<td>tests.Runner1@268f106e</td></tr>
+<tr>
+<td title='tests.Runner2.runScenario()'><b>runScenario</b><br>Test class: tests.Runner2<br>Test method: Runs Cucumber Scenarios<br>Parameters: "get secific post in data driven", "Optional[get posts and posts creation]"</td>
+<td></td>
+<td>0</td>
+<td>tests.Runner2@221a3fa4</td></tr>
+<tr>
+<td title='tests.Runner2.runScenario()'><b>runScenario</b><br>Test class: tests.Runner2<br>Test method: Runs Cucumber Scenarios<br>Parameters: "create a new post", "Optional[get posts and posts creation]"</td>
+<td></td>
+<td>1</td>
+<td>tests.Runner2@221a3fa4</td></tr>
+<tr>
+<td title='tests.Runner2.runScenario()'><b>runScenario</b><br>Test class: tests.Runner2<br>Test method: Runs Cucumber Scenarios<br>Parameters: "update an existing post", "Optional[posts updation]"</td>
+<td></td>
+<td>1</td>
+<td>tests.Runner2@221a3fa4</td></tr>
+<tr>
+<td title='tests.Runner2.runScenario()'><b>runScenario</b><br>Test class: tests.Runner2<br>Test method: Runs Cucumber Scenarios<br>Parameters: "get all posts", "Optional[get user posts]"</td>
+<td></td>
+<td>7</td>
+<td>tests.Runner2@221a3fa4</td></tr>
+<tr>
+<td title='tests.Runner2.runScenario()'><b>runScenario</b><br>Test class: tests.Runner2<br>Test method: Runs Cucumber Scenarios<br>Parameters: "get specific post", "Optional[get user posts]"</td>
+<td></td>
+<td>1</td>
+<td>tests.Runner2@221a3fa4</td></tr>
+</table><p>
+</body>
+</html>
